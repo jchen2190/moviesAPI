@@ -1,6 +1,5 @@
 // npm init -y
 // npm install express morgan axios ejs uuid
-
 // npm install nodemon
 // "start": "nodemon index.js" in script in package.json
 // nodemon index.js
