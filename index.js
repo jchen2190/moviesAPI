@@ -9,15 +9,13 @@ const app = express();
 const logger = require("morgan");
 const path = require("path");
 
-// middleware
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
 app.use(express.static(path.join(__dirname, "css")));
 
-// middleware for JSON testing
-app.use(express.urlencoded({ extended: false })); // reads form data
-app.use(express.json()); // send JSON out from the server
-app.use(logger("dev")); // colorizes status codes in terminal
+app.use(express.urlencoded({ extended: false }));
+app.use(express.json());
+app.use(logger("dev"));
 
 const indexRouter = require("./routes/indexRouter");
 
